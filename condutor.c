@@ -55,7 +55,7 @@ void cadastrar_condutor(Condutor *c) {
         }
     } while (c->idade < 18 || c->idade > 120);
 
-    
+
     // sinistros ( as batidas e amassados...)
     do {
         c->sinistros = ler_inteiro("Numero de sinistros nos ultimos 3 anos: ");
@@ -64,6 +64,15 @@ void cadastrar_condutor(Condutor *c) {
         }
     } while (c->sinistros < 0);
 
+    // Cateforias da CNH (A, B ou C) e validação
+    do {
+        c->cnh = ler_caractere("Categoria da CNH (A / B / C): ");
+        if (c->cnh != 'A' && c->cnh != 'B' && c->cnh != 'C') {
+            printf("%sCategoria invalida! temos A, B ou C.%s\n", ANSI_COR_VERMELHO, ANSI_COR_RESET);
+        }
+    } while (c->cnh != 'A' && c->cnh != 'B' && c->cnh != 'C');
 }
+
+
 
  
