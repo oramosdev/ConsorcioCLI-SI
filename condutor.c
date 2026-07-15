@@ -74,5 +74,11 @@ void cadastrar_condutor(Condutor *c) {
 }
 
 
-
- 
+ //Função de exibição dos dados do condutor 
+ void exibir_condutor(const Condutor *c) {
+    printf("  %sNome:%s %s\n", ANSI_COR_AZUL, ANSI_COR_RESET, c->nome);
+    printf("  %sRG:%s %s\n", ANSI_COR_AZUL, ANSI_COR_RESET, c->rg);
+    printf("  %sIdade:%s %d anos\n", ANSI_COR_AZUL, ANSI_COR_RESET, c->idade);
+    printf("  %sSinistros nos ultimos 3 anos:%s %d\n", ANSI_COR_AZUL, ANSI_COR_RESET, c->sinistros);
+    printf("  %sCNH Categoria:%s %c\n", ANSI_COR_AZUL, ANSI_COR_RESET, c->cnh);
+}
