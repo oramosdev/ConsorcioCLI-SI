@@ -1,7 +1,7 @@
 #ifndef CONDUTOR_H
 #define CONDUTOR_H
 
-// Estrutura do Condutor fixa , as informações sabe 
+// Estrutura de dados para armazenar informações sobre um condutor
 typedef struct {
     char nome[80];
     char rg[6];
@@ -13,3 +13,5 @@ typedef struct {
 
 void cadastrar_condutor(Condutor *c);
 void exibir_condutor(const Condutor *c);
+
+#endif // 
